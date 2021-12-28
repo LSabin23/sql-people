@@ -1,5 +1,6 @@
 require('dotenv').config()
 const mysql = require('mysql2')
+const app = require('./lib/app')
 
 // Connect to database
 const db = mysql.createConnection(
@@ -15,5 +16,5 @@ const db = mysql.createConnection(
 db.connect(err => {
   if (err) throw err
   console.log('Database connected.')
-  // add call to main menu prompt
+  app()
 })
