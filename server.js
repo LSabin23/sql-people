@@ -1,6 +1,7 @@
-const db = require('./db/connection')
 const inquirer = require('inquirer')
 const Department = require('./lib/department')
+const Role = require('./lib/role')
+const Employee = require('./lib/employee')
 
 // MENU PROMPT START
 const menuPrompt = [
@@ -32,39 +33,39 @@ const mainMenu = () => {
       // use switch cases instead of if else for lists longer than 5 options
       switch (menu) {
         case 'View all departments':
-          // call SQL query for showing all departments
+          // call fxn for showing all departments
           console.log('View all departments chosen.')
           Department.viewAllDepts()
           break
         case 'View all roles':
-          // call SQL query for showing all roles
+          // call fxn for showing all roles
           console.log('View all roles chosen.')
+          Role.viewAllRoles()
           break
         case 'View all employees':
-          // call SQL query for showing all employees
+          // call fxn for showing all employees
           console.log('View all employees chosen.')
+          Employee.viewAllEmployees()
           break
         case 'Add a department':
           // call fxn to prompt user for department name
-          // call SQL query to add department to database
           console.log('Add department chosen.')
           Department.addDept()
           break
         case 'Add a role':
           // call fxn to prompt user for name, salary, and department for role
-          // call SQL query to add role to database
           console.log('Add role chosen.')
+          Role.addRole()
           break
         case 'Add an employee':
           // call fxn to prompt user for first name, last name, role, and manager of employee
-          // call SQL query to add employee to database
           console.log('Add employee chosen.')
+          Employee.addEmployee()
           break
         case 'Update an employee role':
-          // call prompt list for employee
-          // prompt user to enter new role for selected employee
-          // call SQL query to update employee role in database
+          // call fxn with prompt list for employee and prompt list for employee's new role
           console.log('Update employee role chosen.')
+          Employee.updateEmployee()
       }
     })
 }
