@@ -48,6 +48,7 @@ const mainMenu = () => {
           // call fxn to prompt user for department name
           // call SQL query to add department to database
           console.log('Add department chosen.')
+          Department.addDept()
           break
         case 'Add a role':
           // call fxn to prompt user for name, salary, and department for role
