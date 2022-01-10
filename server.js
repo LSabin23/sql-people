@@ -54,7 +54,7 @@ const mainMenu = () => {
           break
         case 'Add a role':
           // call fxn to prompt user for name, salary, and department for role
-          console.log('Add role chosen.')
+          // console.log('Add role chosen.')
           Role.addRole()
           break
         case 'Add an employee':
