@@ -65,7 +65,7 @@ const mainMenu = () => {
         case 'Update an employee role':
           // call fxn with prompt list for employee and prompt list for employee's new role
           console.log('Update employee role chosen.')
-          Employee.updateEmployee()
+          Employee.updateEmployeeRole()
       }
     })
 }
